@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jumiaapp</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<style type="text/css">
+    *{
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    body{
+        background-color: rgb(246, 211, 147);
+
+    }
+    header {
+        background-color: white;
+        padding: 10px 20px;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        flex-wrap: wrap;
+        
+
+
+        
+    }
+    .logo{
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        font-size: 10px;
+        font-weight: bold;
+    }
+    .menu ul{
+        display: flex;
+        justify-content: center;
+        gap: 25px;
+        font-size: 20px;
+        align-items: end;
+        cursor: pointer;
+        list-style: none;
+        
+
+    }
+    
+    main{
+        padding: 20px;
+    }
+    .menu li {
+        list-style-type: none;
+        border: none;
+        display: flex;
+        gap: 6px;
+        align-items: center;
+        
+
+
+        
+    }
+   .search{
+    display: flex;
+    flex: 1;
+    gap: 5px;
+   }
+    .search button{
+        height: 36px;
+        color: white;
+        background-color: orange;
+        border: none;
+        cursor: pointer;
+        width: 100px;
+        border: none;
+        
+    }
+    .search button:hover{
+        transform: scale(1.05);
+        transition: 0.3s;
+    }
+    .search input{
+       width: 100%;
+       max-width: 600px;
+       height: 36px;
+       padding: 0 10px;
+       border: 1px solid #ccc;
+
+    }
+    .section h1, .end h1{
+        text-align: center;
+        margin: 20px 0;
+    }
+    .produit{
+        width: 100%;
+        max-width: 2000px;
+        background : white;
+        display: flex;
+        gap: 20px;
+        padding: 15px;
+        justify-content: center;
+        flex-wrap: wrap;
+
+        
+        
+    }
+    .cart{
+        width: 200px;
+        background: #fff;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+        text-align: center;
+        
+    }
+    .cart img{
+        width: 200px;
+        height: 200px;
+        object-fit: cover;
+       
+    }
+    .cart:hover{
+        transform: scale(1.05);
+        transition: 0.3s;
+    }
+    .categorie{
+        display: flex;
+        margin-top: 30px;
+        padding: 20px;
+        justify-content: center;
+        gap: 20px;
+        background-color: white;
+        flex-wrap: wrap;
+    }
+    .categorie img{
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
+        border-radius: 200px;
+        margin-top:20px;
+    }
+    .brand{
+        display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 20px;
+        background-color: white;
+    }
+    .brand img{
+        width: 100%;
+        height: 150px;
+        border-radius: 10px;
+       object-fit: cover;
+
+    }
+   
+    @media (max-width:600px){
+        header{
+            flex-direction: column;
+            align-items: stretch;
+        }
+        .menu ul{
+            justify-content: center;
+        }
+    }
+    .buy{
+        background: orange;
+        color: #fff;
+        border: none;
+        padding: 6px 12px;
+        margin: 10px 0;
+        cursor: pointer;
+        border-radius: 10px;
+        transition: 0.3s;
+    }
+    .buy:hover{
+        transform:translate(-2px) ;
+        box-shadow: 0 8px 18px rgba(0,0,0,0.3);
+
+    }
+    .logo img {
+        width: 30px;
+        height: 30px;
+    }
+    h1{
+        margin-right: -7;
+    }
+  
+    
+</style>
+<body>
+    <header>
+        <div class="logo">
+<i class="fa-solid fa-bars"></i>
+
+            <h1>Jumia</h1>
+            <a href="https://www.jumia.com">
+  <img src="https://images.seeklogo.com/logo-png/55/3/jumia-group-africa-logo-png_seeklogo-556405.png" alt="Jumia Logo" width="200">
+</a>
+
+        </div>
+         <div class="search">
+                <input type="text" placeholder="cherchez un produit,une marqueou une categorie" >
+                <button>rechercher</button>
+            </div>
+               <div class="menu">
+            <ul id="menu">
+                
+                <li><i class="fa-regular fa-comment-dots"></i>se connecter</li>
+                
+                <li><i class="fa-solid fa-circle-info"></i>aide</li>
+                
+                <li><i class="fa-solid fa-cart-shopping"></i>panier</li>
+            </ul>
+        </div>
+        
+    </header>
+    <main>
+    <div class="section">
+        <div class="container">
+            <h1>Nos Meilleures Categories-Informatique</h1>
+            <div class="produit">
+                <div class="cart">
+                    <img src="download (9).jfif" >
+                    <p> article 01</p>
+                    <button class="buy">Ajouter</button>
+
+
+                </div>
+                <div class="cart">
+                    <img src="download (10).jfif" >
+                    <p> article 02</p><button class="buy">Ajouter</button>
+
+
+                </div>
+                <div class="cart">
+                    <img src="download (11).jfif" >
+                    <p> article 03</p>
+                    <button class="buy">Ajouter</button>
+
+
+                </div>
+                <div class="cart">
+                    <img src="download (12).jfif" >
+                    <p> article 04</p>
+                    <button class="buy">Ajouter</button>
+
+
+                </div>
+                       <div class="cart">
+                    <img src="download (13).jfif" >
+                    <p> article 05</p>
+                    <button class="buy">Ajouter</button>
+
+
+                </div>
+          
+                
+            </div>
+        </div>
+        <div class="categorie">
+                <div class="item">
+                    <img src="download (9).jfif" >
+                    <p> article 01</p>
+
+                </div>
+                <div class="item">
+                    <img src="download (10).jfif" >
+                    <p> article 01</p>
+
+                </div>
+                <div class="item">
+                    <img src="download (11).jfif" >
+                    <p> article 01</p>
+
+                </div>
+                <div class="item">
+                    <img src="download (12).jfif" >
+                    <p> article 01</p>
+
+                </div>
+                       <div class="item">
+                    <img src="download (13).jfif" >
+                    <p> article 01</p>
+
+                </div>
+                            <div class="item">
+                    <img src="download (8).jfif" >
+                    <p> article 01</p>
+
+                </div>
+                            <div class="item">
+                    <img src="download (7).jfif" >
+                    <p> article 01</p>
+
+                </div>
+                            <div class="item">
+                    <img src="download (6).jfif" >
+                    <p> article 01</p>
+
+                </div>
+                            <div class="item">
+                    <img src="download (5).jfif" >
+                    <p> article 01</p>
+
+                </div>
+          
+                
+            </div>
+    </div>
+    <div class="end">
+        <h1>vos marque prefere</h1>
+        <div class="brand">
+         <img src="download (5).jfif" >
+         <img src="download (5).jfif" >
+
+        <img src="download (5).jfif" >
+        <img src="download (5).jfif" >
+        <img src="download (5).jfif" >
+
+
+                  
+
+
+                
+
+        </div>
+    </div>
+    </main>
+    
+</body>
+</html>
